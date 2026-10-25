@@ -113,15 +113,6 @@ $("cake").addEventListener("click", () => {
   $("cakeInstruction").textContent = "A wish made with love ♡";
   $("songLine").classList.remove("hidden");
   $("toKevin").classList.remove("hidden");
-  // Placeholder celebration: use browser speech if available. Replace with recorded singing/audio for the final version.
-  if ("speechSynthesis" in window) {
-    window.speechSynthesis.cancel();
-    const line = new SpeechSynthesisUtterance("Happy birthday, dear princess. We all wish you a very happy birthday!");
-    line.rate = 0.82;
-    line.pitch = 1.12;
-    line.volume = 0.8;
-    window.speechSynthesis.speak(line);
-  }
 });
 $("toKevin").addEventListener("click", () => {
   showScene("finalScene");
